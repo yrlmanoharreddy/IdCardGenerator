@@ -27,8 +27,8 @@ def create_id_card(pdf_file, id_template, data):
     for info in data:
         c.drawImage(id_template.path, 0, 0, width=id_template.size[0], height=id_template.size[1])
         c.setFont("Helvetica", 12)
-        c.drawString(100, 50, f"Name: {info['Name']}")
-        c.drawString(100, 30, f"Title: {info['Title']}")
+        c.drawString(30, 50, f"Name: {info['Name']}")
+        c.drawString(30, 30, f"Title: {info['Title']}")
 
         photo_dir = info['photo_dir']
         photo_name = info['photo_name']
